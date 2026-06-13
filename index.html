@@ -28,8 +28,6 @@ html, body {
 body {
 	color: white;
 	touch-action: none;
-	/* Safe area insets for notch / Dynamic Island */
-	padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 #canvas {
@@ -37,9 +35,11 @@ body {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	/* Fill the full viewport, respecting safe areas */
-	width: 100%;
-	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
 	touch-action: none;
 }
 
@@ -175,7 +175,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":11838548,"index.wasm":35749181},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":1,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":11838548,"index.wasm":35749181},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
